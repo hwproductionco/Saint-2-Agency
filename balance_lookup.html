@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if IE 10]> <html lang="en" class="ie10"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+	<meta charset="utf-8" />
+	<title>Agency Toolbox | Balance Lookup</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	<link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet" />
+	<link href="assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+	<link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+	<link href="assets/css/style.css" rel="stylesheet" />
+	<link href="assets/css/style_responsive.css" rel="stylesheet" />
+	<link href="assets/css/style_default.css" rel="stylesheet" id="style_color" />
+	<link href="#" rel="stylesheet" id="style_metro" />
+	<link href="assets/fancybox/source/jquery.fancybox.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="assets/uniform/css/uniform.default.css" />
+	<link rel="stylesheet" href="assets/data-tables/DT_bootstrap.css" />
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="fixed-top">
+	<!-- BEGIN HEADER -->
+	<div id="header" class="navbar navbar-inverse navbar-fixed-top">
+		<!-- BEGIN TOP NAVIGATION BAR -->
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<!-- BEGIN LOGO -->
+				<a class="brand" href="index.html">
+				Welcome, Username
+				</a>
+				<!-- END LOGO -->
+				<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+				<a class="btn btn-navbar collapsed" id="main_menu_trigger" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="arrow"></span>
+				</a>          
+				<!-- END RESPONSIVE MENU TOGGLER -->				
+				<div class="top-nav">
+					
+					<!-- BEGIN TOP NAVIGATION MENU -->					
+					<ul class="nav pull-right" id="top_menu">
+						<li class="divider-vertical hidden-phone hidden-tablet"></li>
+						<!-- BEGIN USER LOGIN DROPDOWN -->
+						<!-- <li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"  style="width:100%;">
+							<i class="icon-wrench"></i>
+							<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="account_settings.html"><i class="icon-wrench"></i> Account Info</a></li>
+								<li><a href="#"><i class="icon-pushpin"></i> Shortcuts</a></li>
+								<li><a href="#"><i class="icon-trash"></i> Trash</a></li>								
+							</ul>
+						</li> -->
+						<!-- END USER LOGIN DROPDOWN -->
+						<li class="divider-vertical hidden-phone hidden-tablet"></li>
+						<!-- BEGIN USER LOGIN DROPDOWN -->
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"  style="width:100%;">
+							<i class="icon-cog"></i>
+							<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="user_info.html"><i class="icon-user"></i> Account Settings</a></li>
+								
+								<li class="divider"></li>
+								<li><a href="login.html"><i class="icon-key"></i> Log Out</a></li>
+							</ul>
+						</li>
+						<!-- END USER LOGIN DROPDOWN -->
+					</ul>
+					<!-- END TOP NAVIGATION MENU -->	
+				</div>
+			</div>
+		</div>
+		<!-- END TOP NAVIGATION BAR -->
+	</div>
+	<!-- END HEADER -->
+	<!-- BEGIN CONTAINER -->
+	<div id="container" class="row-fluid">
+		<!-- BEGIN SIDEBAR -->
+		<div id="sidebar" class="nav-collapse collapse">
+			<!-- BEGIN SIDEBAR MENU -->
+			<ul>
+				<li>
+					<a href="index.html">
+					<i class="icon-dashboard"></i> Dashboard
+					</a>					
+				</li>
+				<li class="has-sub">
+					<a href="javascript:;" class="">
+					<i class="icon-group"></i> My Clients
+					<span class="arrow"></span>
+					</a>
+					<ul class="sub active">
+						<li><a class="" href="view_all_active_clients.html">Active Clients</a></li><li><a class="" href="view_all_trial_clients.html">Trial Clients</a></li>
+						<li><a class="" href="client_announcement.html">Client Announcement</a></li>
+						<li><a class="" href="add_new_client.html">Add New Client</a></li></ul>
+
+				</li>
+				
+				<li class="has-sub">
+					<a href="javascript:;" class="">
+					<i class="icon-sitemap"></i> Sub Agencies
+					<span class="arrow"></span>
+					</a>
+                <ul class="sub"><li><a class="" href="view_all_sub_agencies.html">View All</a></li><li><a class="add_sub_agency.html" href="">Add New Sub-Agency</a></li></ul></li
+				><li class="has-sub active">
+					<a href="javascript:;" class="">
+					<i class="icon-wrench"></i> Tools
+					<span class="arrow"></span>
+					</a>
+					<ul class="sub">
+						<li><a class="" href="client_links.html">Client Links</li></a>
+						<li class="active"><a class="" href="balance_lookup.html">Balance Lookup</a></li>
+						<li><a class="" href="online_enrollment.html">Online Enrollment</a></li>
+<li><a class="" href="sub_agency_login.html">Sub-Agency Login</a></li>
+<li><a class="" href="points_calculator.html">Points Calculator</a></li>
+<li><a class="" href="http://api.clienttoolbox.com" target="_blank">API</a></li>
+</ul></li>
+				
+				<li class="has-sub">
+					<a href="http://support.stickystreet.com/" class="" target="_blank">
+					<i class="icon-bullhorn"></i> Support
+					</a>
+					</li>
+				
+			</ul>
+		</div>
+		<!-- END SIDEBAR -->
+		<!-- BEGIN PAGE -->
+		<div id="body">
+			<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+			<div id="widget-config" class="modal hide">
+				<div class="modal-header">
+					<button data-dismiss="modal" class="close" type="button">×</button>
+					<h3>Widget Settings</h3>
+				</div>
+				<div class="modal-body">
+					<p>Here will be a configuration form</p>
+				</div>
+			</div>
+			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+			<!-- BEGIN PAGE CONTAINER-->			
+			<div class="container-fluid">
+				<!-- BEGIN PAGE HEADER-->
+				<div class="row-fluid">
+					<div class="span12">
+						<!-- BEGIN STYLE CUSTOMIZER-->
+						<!-- <div id="styler" class="hidden-phone">
+							<a href="configure_points_program.html"><i class="icon-cog"></i></a>
+							<span class="settings">
+								<span class="text">Style:</span>
+								<span class="colors">
+									<span class="color-default" data-style="default">
+									</span>
+									<span class="color-grey" data-style="grey">
+									</span>
+									<span class="color-navygrey" data-style="navygrey">
+									</span>											
+									<span class="color-red" data-style="red">
+									</span>	
+								</span>
+								<span class="layout">
+									<label class="hidden-phone">
+									<input type="checkbox" class="header" checked value="" />Sticky Header
+									</label><br />
+									<label><input type="checkbox" class="metro" value="" />Metro Style</label>
+									<span class="space5"></span>
+									<a class="btn fancybox-button" data-rel="fancybox-button" title="Conquer Large Desktop Preview"  href="assets/img/demo/desktop.png"><i class="icon-eye-open"></i> Screenshots</a>
+									<a class="fancybox-button" data-rel="fancybox-button" title="Conquer Notebook Preview" href="assets/img/demo/notebook.png"></a>
+									<a class="fancybox-button" data-rel="fancybox-button" title="Conquer Tablet Preview"  href="assets/img/demo/tablet.png"></a>
+									<a class="fancybox-button" data-rel="fancybox-button" title="Conquer Phone Preview"  href="assets/img/demo/phone.png"></a>
+								</span>
+							</span>
+						</div>-->
+						<!-- END STYLE CUSTOMIZER-->    
+						<!-- BEGIN PAGE TITLE & BREADCRUMB-->		
+						<!--h3 class="page-title">
+							Users
+							<small>Add New User</small>
+						</h3-->
+						<ul class="breadcrumb">
+							<div class="row-fluid">
+                     <div class="span12 responsive">
+                     
+                     <div class="span4 responsive">
+                     	
+                     </div>
+                     
+                     <div class="span4 responsive">
+                     	
+                     </div>
+                      
+                      <div class="span4 responsive" style="text-align: right;">
+                      		<img src="assets/img/loyaltymonster.png" border="0" style="max-width:125px;" />
+                      </div>
+                      
+                    </div>
+                    
+                  </div>        </ul>
+						<!-- END PAGE TITLE & BREADCRUMB-->
+					</div>
+				</div>
+				<!-- END PAGE HEADER-->
+				<!-- BEGIN PAGE CONTENT-->
+				<div id="page" class="dashboard">  
+               
+                </div> 
+<div class="row-fluid">
+						<div class="span12">
+							<!-- BEGIN EXAMPLE TABLE PORTLET-->
+							<div class="widget">
+								<div class="widget-title">
+									<h4><i class="icon-user"></i> Balance Lookup</h4>
+															
+								</div>
+								<div class="widget-body">
+                                <div class="row-fluid">
+                                <div class="span12">
+                                <!-- BEGIN FORM -->
+                                
+                                
+                                
+                               
+                                
+                              
+                                
+                                <p>There are two options to allow your clients' customers to access their account balances or to sign-up for a new loyalty program from your client's own website:</p>
+                                
+                                <ul>
+                                
+                               	<li><a href="#option1">Option 1</a> is easier to implement (It's just a link.)</li>
+                                <li><a href="#option2">Option 2</a> will allow the lookup result to be shown inside the client website's page.</li>
+                                </ul>
+                                <a name="option1"></a>
+                                <div class="well">
+                                <h4 class="muted">Option 1</h4>
+                                
+                                <p>This is the simplest solution and requires no coding or ability to upload files to their webserver.</p>
+								<p>However, there is currently no way to customize the display with branding elements.</p>
+												<div class="alert alert-block alert-success">
+													http://www.clienttoolbox.com/balance.php?a=<strong class="text-info">XXX</strong>
+												</div>
+                                                
+                                                
+                                <p>Replace the <strong class="text-info">XXX</strong> with the client's account ID.</p>
+                                <p>That's all.</p>
+                                
+                                <p>If you want to get fancier, you can add the following customizations:</p>
+                                
+                                <ul>
+                                	<li><strong>Language:</strong> Replace <strong class="text-info">AAA</strong> in the URL below with the two-letter language code of one of the available languages.</li>
+									<li><strong>Metric Decimal Separator:</strong> Add <strong>"&sep=,"</strong> to the URL to make the decimal separator be a comma and the thousands separator be a period.</li>
+									<li><strong>Balance Only:</strong> To only return the balance for a campaign, replace <strong class="text-info">CCC</strong> with the Campaign ID. Campaign IDs are shown below the "Campaign Name" when you click the "Edit" button to the right of the campaign in the campaign list on the Control Panel screen.</li>
+									<li>To use your own <strong>custom CSS</strong> definition file, replace <strong class="text-info">DDD</strong> with the full URL of where your CSS file is.</li>
+                                </ul>  
+                                
+                                
+                                <div class="alert alert-block alert-success">
+								http://www.clienttoolbox.com/balance.php?a=XXX&lang=<strong class="text-info">AAA</strong>&sep=,&balance_only=<strong class="text-info">CCC</strong>&css=<strong class="text-info">DDD</strong>
+							    </div>        
+                                                
+                                                <p>Not every option is required. So for example if you just want to have the balance lookup in Spanish with the comma as the thousands separator, it would look like this:</p>      
+                                                
+                                                <div class="alert alert-block alert-success">
+								http://www.clienttoolbox.com/balance.php?a=CLIENT_ACCOUNT_ID&lang=ES&sep=,
+							    </div> 
+												
+											</div>
+                                            
+                                            
+                                        <a name="option2"></a>    
+                                     <div class="well">
+                                     
+                                     <h4 class="muted">Option 2</h4>
+                                     <p>Gives you much more control, but you need to have certain abilities, or know someone who does, and the client's website needs to fit certain requirements.</p>
+                                     
+                                     <div class="row-fluid">
+                                     <div class="span8">
+                                     
+                                     <p><strong>Option 2 is pretty simple to implement, and takes only two steps:</strong></p>
+                                     
+                                     <p><strong>Step 1</strong></p>
+                                     
+                                     <p>The first step is to create a new page on your site where the results will be shown. Name it with a .php extention (not .html) - For example: <strong>"balance_lookup.php"</strong>.</p>
+                                     
+                                     <p>Make sure that the content area is at least 550 pixels wide (it likely is.)</p>
+                                     
+                                     <p>Place the following HTML code where content would normally go:</p>
+                                     
+                                     <div class="alert alert-block alert-success">
+										&lt;?php  $code = $_POST['code'];<br />
+$url = "http://www.clienttoolbox.com/";<br />
+$url .= "check_code.php?code=$code";<br />
+$url .= "&a=<strong class="text-info">XXX</strong>";<br />
+$ch = curl_init();<br />
+curl_setopt($ch, CURLOPT_URL,"$url");<br />
+curl_setopt($ch, CURLOPT_HEADER, false);<br />
+curl_exec($ch);<br />
+curl_close($ch);<br />
+?&gt;
+                                
+							    </div> 
+                                
+                                <p>Replace the "<strong class="text-info">XXX</strong>" with the client's Account ID.</p>
+                                     
+                                     
+                                     </div>
+                                     
+                                     
+                                     <div class="span4">
+                                     
+                                     	<div class="well">
+                                        	<h5>Requirements</h5>
+                                            
+                                            <p>You, your client, or someone else must have the ability to add files to your client's web server (through FTP or some other method.)</p>
+                                            <p>The server where your client's site is hosted must has PHP enabled. (The vast majority of Web servers do, and it will be unusual for it not to.)</p>
+                                            <p>If neither requirements can be met, please use Option 1, above.</p>
+                                            <p>If your client is using a content management tool like Joomla, Mambo, or Drupal, include these steps as separate files inside a Wrapper or iFrame.</p>
+                                        
+                                        </div>
+                                     
+                                     </div>
+                                     
+                                     
+                                     
+                                     </div>
+                                     
+                                     
+                                     
+                                     <p><strong>Step 2</strong></p>
+                                     
+                                     <p>The second step is to place the following HTML Form on a page of your client's website for customers to enter their card code or unique identifier:</p>
+                                     
+                                     <div class="alert alert-block alert-success">
+                                     &lt;form action="<strong>balance_lookup.php</strong>" method="post" name="rewards_form"&gt;<br />
+									 Account Number:<br />
+									 &lt;input type="text" name="code" size="24" maxlength="255" border="0"&gt;<br />
+									 &lt;input type="submit" name="code_submit_button" value="Look It Up" border="0"&gt;<br />
+									 &lt;/form&gt;
+                                     
+                                     </div>
+                                     
+                                     <p>Replace "<strong>balance_lookup.php</strong>" with the filename of the file from Step 1 (if you named it differently).</p>
+									 <p>Save and upload the changed files to the client's server. Both files should be on the same directory.</p>
+                                     <p>That's all.</p>
+                                     <p>If you want to get fancier, you can add the following customization:</p>
+                                     
+                                     
+                                     <ul>
+                                     	<li><strong>Language:</strong> Replace <strong class="text-info">AAA</strong> in the URL below with the two-letter language code of one of the available languages.</li>
+										<li><strong>Metric Decimal Separator:</strong> Add <strong>"&sep=,"</strong> to the URL to make the decimal separator be a comma and the thousands separator be a period.</li>
+										<li><strong>Balance Only: </strong>To only return the balance for a campaign, replace <strong class="text-info">CCC</strong> with the Campaign ID. Campaign IDs are shown below the "Campaign Name" when you click the "Edit" button to the right of the campaign in the campaign list on the Control Panel screen.</li>
+										<li>To use your own custom CSS definition file, replace <strong class="text-info">DDD</strong> with the full URL of where your CSS file is.</li>
+                                     
+                                     </ul>
+                                     
+                                     <p>Template:</p>
+                                     
+                                     <div class="alert alert-block alert-success">
+                                     
+                                     &lt;?php  $code = $_POST['code'];<br />
+$url = "http://www.clienttoolbox.com/check_code.php?code=$code";<br />
+$url .= "&a=<strong class="text-info">XXX</strong>";<br />
+$url .= "&lang=<strong class="text-info">AAA</strong>";<br />
+$url .= "&sep=,";<br />
+$url .= "&balance_only=<strong class="text-info">CCC</strong>";<br />
+$url .= "&css=<strong class="text-info">DDD</strong>";<br />
+$ch = curl_init();<br />
+curl_setopt($ch, CURLOPT_URL, "$url");<br />
+curl_setopt($ch, CURLOPT_HEADER, false);<br />
+curl_exec($ch);<br />
+curl_close($ch);<br />
+?&gt;
+                                      
+                                     </div>
+                                     
+                                     <p>Remember to replace the "<strong class="text-info">XXX</strong>" with the client's Account ID.</p>
+                                     
+                                     
+                                     </div>        
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+									
+                                            </div>
+                                    
+                                    </div>
+                                    
+                                    
+                                    
+								</div>
+                                
+                                
+                                
+							</div>
+							<!-- END EXAMPLE TABLE PORTLET-->
+                            
+                            
+                                   
+                                    
+                            
+                            
+						</div>
+					</div>
+					
+				</div>
+				<!-- END PAGE CONTENT-->
+			</div>
+			<!-- END PAGE CONTAINER-->
+		</div>
+		<!-- END PAGE -->
+	</div>
+	<!-- END CONTAINER -->
+	<!-- BEGIN FOOTER -->
+	<div id="footer">
+		
+		<div class="span pull-right">
+			<span class="go-top"><i class="icon-arrow-up"></i></span>
+		</div>
+	</div>
+	<!-- END FOOTER -->
+	<!-- BEGIN JAVASCRIPTS -->
+	<!-- Load javascripts at bottom, this will reduce page load time -->
+	<script src="assets/js/jquery-1.8.2.min.js"></script>	
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.blockui.js"></script>
+	<!-- ie8 fixes -->
+	<!--[if lt IE 9]>
+	<script src="assets/js/excanvas.js"></script>
+	<script src="assets/js/respond.js"></script>
+	<![endif]-->	
+	<script type="text/javascript" src="assets/data-tables/jquery.dataTables.js"></script>
+	<script type="text/javascript" src="assets/data-tables/DT_bootstrap.js"></script>	
+	<script type="text/javascript" src="assets/uniform/jquery.uniform.min.js"></script>
+	<script src="assets/fancybox/source/jquery.fancybox.pack.js"></script>
+	<script src="assets/js/app.js"></script>		
+	<script>
+		jQuery(document).ready(function() {			
+			// initiate layout and plugins
+			App.init();
+		});
+	</script>
+</body>
+<!-- END BODY -->
+</html>

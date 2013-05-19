@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if IE 10]> <html lang="en" class="ie10"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+	<meta charset="utf-8" />
+	<title>Agency Toolbox | Online Enrollment</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	<link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet" />
+	<link href="assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+	<link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+	<link href="assets/css/style.css" rel="stylesheet" />
+	<link href="assets/css/style_responsive.css" rel="stylesheet" />
+	<link href="assets/css/style_default.css" rel="stylesheet" id="style_color" />
+	<link href="#" rel="stylesheet" id="style_metro" />
+	<link href="assets/fancybox/source/jquery.fancybox.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="assets/uniform/css/uniform.default.css" />
+	<link rel="stylesheet" href="assets/data-tables/DT_bootstrap.css" />
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="fixed-top">
+	<!-- BEGIN HEADER -->
+	<div id="header" class="navbar navbar-inverse navbar-fixed-top">
+		<!-- BEGIN TOP NAVIGATION BAR -->
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<!-- BEGIN LOGO -->
+				<a class="brand" href="index.html">
+				Welcome, Username
+				</a>
+				<!-- END LOGO -->
+				<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+				<a class="btn btn-navbar collapsed" id="main_menu_trigger" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="arrow"></span>
+				</a>          
+				<!-- END RESPONSIVE MENU TOGGLER -->				
+				<div class="top-nav">
+					
+					<!-- BEGIN TOP NAVIGATION MENU -->					
+					<ul class="nav pull-right" id="top_menu">
+						<li class="divider-vertical hidden-phone hidden-tablet"></li>
+						<!-- BEGIN USER LOGIN DROPDOWN -->
+						<!-- <li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"  style="width:100%;">
+							<i class="icon-wrench"></i>
+							<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="account_settings.html"><i class="icon-wrench"></i> Account Info</a></li>
+								<li><a href="#"><i class="icon-pushpin"></i> Shortcuts</a></li>
+								<li><a href="#"><i class="icon-trash"></i> Trash</a></li>								
+							</ul>
+						</li> -->
+						<!-- END USER LOGIN DROPDOWN -->
+						<li class="divider-vertical hidden-phone hidden-tablet"></li>
+						<!-- BEGIN USER LOGIN DROPDOWN -->
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"  style="width:100%;">
+							<i class="icon-cog"></i>
+							<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="user_info.html"><i class="icon-user"></i> Account Settings</a></li>
+								
+								<li class="divider"></li>
+								<li><a href="login.html"><i class="icon-key"></i> Log Out</a></li>
+							</ul>
+						</li>
+						<!-- END USER LOGIN DROPDOWN -->
+					</ul>
+					<!-- END TOP NAVIGATION MENU -->	
+				</div>
+			</div>
+		</div>
+		<!-- END TOP NAVIGATION BAR -->
+	</div>
+	<!-- END HEADER -->
+	<!-- BEGIN CONTAINER -->
+	<div id="container" class="row-fluid">
+		<!-- BEGIN SIDEBAR -->
+		<div id="sidebar" class="nav-collapse collapse">
+			<!-- BEGIN SIDEBAR MENU -->
+			<ul>
+				<li>
+					<a href="index.html">
+					<i class="icon-dashboard"></i> Dashboard
+					</a>					
+				</li>
+				<li class="has-sub">
+					<a href="javascript:;" class="">
+					<i class="icon-group"></i> My Clients
+					<span class="arrow"></span>
+					</a>
+					<ul class="sub active">
+						<li><a class="" href="view_all_active_clients.html">Active Clients</a></li><li><a class="" href="view_all_trial_clients.html">Trial Clients</a></li>
+						<li><a class="" href="client_announcement.html">Client Announcement</a></li>
+						<li><a class="" href="add_new_client.html">Add New Client</a></li></ul>
+
+				</li>
+				
+				<li class="has-sub">
+					<a href="javascript:;" class="">
+					<i class="icon-sitemap"></i> Sub Agencies
+					<span class="arrow"></span>
+					</a>
+                <ul class="sub"><li><a class="" href="view_all_sub_agencies.html">View All</a></li><li><a class="add_sub_agency.html" href="">Add New Sub-Agency</a></li></ul></li
+				><li class="has-sub active">
+					<a href="javascript:;" class="">
+					<i class="icon-wrench"></i> Tools
+					<span class="arrow"></span>
+					</a>
+					<ul class="sub">
+						<li><a class="" href="client_links.html">Client Links</li></a>
+						<li><a class="" href="balance_lookup.html">Balance Lookup</a></li>
+						<li class="active"><a class="" href="online_enrollment.html">Online Enrollment</a></li>
+<li><a class="" href="sub_agency_login.html">Sub-Agency Login</a></li>
+<li><a class="" href="points_calculator.html">Points Calculator</a></li>
+<li><a class="" href="http://api.clienttoolbox.com" target="_blank">API</a></li>
+</ul></li>
+				
+				<li class="has-sub">
+					<a href="http://support.stickystreet.com/" class="" target="_blank">
+					<i class="icon-bullhorn"></i> Support
+					</a>
+					</li>
+				
+			</ul>
+		</div>
+		<!-- END SIDEBAR -->
+		<!-- BEGIN PAGE -->
+		<div id="body">
+			<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+			<div id="widget-config" class="modal hide">
+				<div class="modal-header">
+					<button data-dismiss="modal" class="close" type="button">×</button>
+					<h3>Widget Settings</h3>
+				</div>
+				<div class="modal-body">
+					<p>Here will be a configuration form</p>
+				</div>
+			</div>
+			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+			<!-- BEGIN PAGE CONTAINER-->			
+			<div class="container-fluid">
+				<!-- BEGIN PAGE HEADER-->
+				<div class="row-fluid">
+					<div class="span12">
+						<!-- BEGIN STYLE CUSTOMIZER-->
+						<!-- <div id="styler" class="hidden-phone">
+							<a href="configure_points_program.html"><i class="icon-cog"></i></a>
+							<span class="settings">
+								<span class="text">Style:</span>
+								<span class="colors">
+									<span class="color-default" data-style="default">
+									</span>
+									<span class="color-grey" data-style="grey">
+									</span>
+									<span class="color-navygrey" data-style="navygrey">
+									</span>											
+									<span class="color-red" data-style="red">
+									</span>	
+								</span>
+								<span class="layout">
+									<label class="hidden-phone">
+									<input type="checkbox" class="header" checked value="" />Sticky Header
+									</label><br />
+									<label><input type="checkbox" class="metro" value="" />Metro Style</label>
+									<span class="space5"></span>
+									<a class="btn fancybox-button" data-rel="fancybox-button" title="Conquer Large Desktop Preview"  href="assets/img/demo/desktop.png"><i class="icon-eye-open"></i> Screenshots</a>
+									<a class="fancybox-button" data-rel="fancybox-button" title="Conquer Notebook Preview" href="assets/img/demo/notebook.png"></a>
+									<a class="fancybox-button" data-rel="fancybox-button" title="Conquer Tablet Preview"  href="assets/img/demo/tablet.png"></a>
+									<a class="fancybox-button" data-rel="fancybox-button" title="Conquer Phone Preview"  href="assets/img/demo/phone.png"></a>
+								</span>
+							</span>
+						</div>-->
+						<!-- END STYLE CUSTOMIZER-->    
+						<!-- BEGIN PAGE TITLE & BREADCRUMB-->		
+						<!--h3 class="page-title">
+							Users
+							<small>Add New User</small>
+						</h3-->
+						<ul class="breadcrumb">
+							<div class="row-fluid">
+                     <div class="span12 responsive">
+                     
+                     <div class="span4 responsive">
+                     	
+                     </div>
+                     
+                     <div class="span4 responsive">
+                     	
+                     </div>
+                      
+                      <div class="span4 responsive" style="text-align: right;">
+                      		<img src="assets/img/loyaltymonster.png" border="0" style="max-width:125px;" />
+                      </div>
+                      
+                    </div>
+                    
+                  </div>        </ul>
+						<!-- END PAGE TITLE & BREADCRUMB-->
+					</div>
+				</div>
+				<!-- END PAGE HEADER-->
+				<!-- BEGIN PAGE CONTENT-->
+				<div id="page" class="dashboard">  
+               
+                </div> 
+<div class="row-fluid">
+						<div class="span12">
+							<!-- BEGIN EXAMPLE TABLE PORTLET-->
+							<div class="widget">
+								<div class="widget-title">
+									<h4><i class="icon-user"></i> Online Enrollment</h4>
+															
+								</div>
+								<div class="widget-body">
+                                <div class="row-fluid">
+                                <div class="span12">
+                                <!-- BEGIN FORM -->
+                                
+                                
+                                
+                               
+                                
+                              
+                                
+                                <p>There are two ways to have your client's customers enroll online from their own website.</p>
+                                
+                                <ul>
+                                
+                               	<li><a href="#option1">Option 1</a> is the simplest, and requires no coding. (It's just a link.)</li>
+                                <li><a href="#option2">Option 2</a> allows far more customization and for the signup process to happen completely inside your client's website.</li>
+                                </ul>
+                                <a name="option1"></a>
+                                <div class="well">
+                                <h4>Option 1</h4>
+                                
+                                <p>A simpler and quicker option, for the technologically less inclined. However, this option currently does not allow the customization of the display with your client's branding elements.</p>
+								<p>This option will get your client's customer to a screen where they can enter their information. Once submitted, your client will receive an email with the customer's details, and the customer information will be automatically added to your client's account and campaign.</p>
+                                
+                                <p>For this option, simply create a link on your site to the following URL:</p>
+												<div class="alert alert-block alert-success">
+													http://www.clienttoolbox.com/signup.php?a=<strong class="text-info">AAA</strong>&b=<strong class="text-info">BBB</strong>&c=<strong class="text-info">CCC</strong>&d=<strong class="text-info">DDD</strong>
+												</div>
+                                                
+                                                
+                                <p>Make sure to replace the following placeholders:</p>
+                                
+                                <ul>
+                                	<li><strong class="text-info">AAA</strong> - This is the client's Account ID. You can find it near the bottom of the page when you click the "Edit" button next to the Account Information section in the Control Panel, when you log in to your client's account from in the listing of Clients when you click the "Clients" tab above. Example: "acmeinc".</li>
+									<li><strong class="text-info">BBB</strong> - This is your client's account security token (a long string of 32 characters). You can find it near the bottom of the page when you click the "Edit" button next to the Account Information section in the Control Panel, when you log in to your client's account from in the listing of Clients when you click the "Clients" tab above. Note: The Security Token will change if you change you client's account owner's password. Example: "89e495e7941cf9e40e6980d14a16bf023ccd4c91".</li>
+									<li><strong class="text-info">CCC</strong> - This is the ID of the campaign your client wants their customer to signup for. Campaign IDs are shown below the "Campaign Name" when you click the "Edit" button to the right of the campaign in the campaign list on the Control Panel screen.</li>
+									<li><strong class="text-info">DDD</strong> - The url you want your client's customer to go to after submitting their information. Make sure to type the full URL, including "http://" or "https://". Example: "http://www.yoursite.com/thank-you.html".</li>
+                                </ul>  
+                                
+                                <p>If you want to add a card number field, add <strong>"&card=" </strong>and provide your own label. NOTE: Replace spaces with the code "%20". For example:</p>
+                                
+                                <div class="alert alert-block alert-success">
+								http://www.clienttoolbox.com/signup.php?a=<strong class="text-info">AAA</strong>&b=<strong class="text-info">BBB</strong>&c=<strong class="text-info">CCC</strong>&d=<strong class="text-info">DDD</strong>&card=<strong>Membership%20ID</strong>
+							    </div>   
+                                
+                                
+                                <p>If you want to add a logo, add <strong>"&logo="</strong> and provide your own URL. For example:</p>
+                                
+                                <div class="alert alert-block alert-success">
+								http://www.clienttoolbox.com/signup.php?a=<strong class="text-info">AAA</strong>&b=<strong class="text-info">BBB</strong>&c=<strong class="text-info">CCC</strong>&d=<strong class="text-info">DDD</strong>&logo=<strong>your_logo.png</strong>
+							    </div>   
+                                
+                                <p>If you want to add a notice above the instructions, add <strong>"&notice=" </strong>and provide your own text. NOTE: Replace spaces with the code <strong>"%20"</strong>. For example:</p>
+                                
+                                <div class="alert alert-block alert-success">
+								http://www.clienttoolbox.com/signup.php?a=<strong class="text-info">AAA</strong>&b=<strong class="text-info">BBB</strong>&c=<strong class="text-info">CCC</strong>&d=<strong class="text-info">DDD</strong>&notice=<strong>This%20is%20a%20test%20notice.</strong>
+							    </div>    
+                                
+                                 <p>If you want to use your own CSS, add <strong>"&css="</strong> and provide your own URL. For example:</p>
+                                
+                                <div class="alert alert-block alert-success">
+								http://www.clienttoolbox.com/signup.php?a=<strong class="text-info">AAA</strong>&b=<strong class="text-info">BBB</strong>&c=<strong class="text-info">CCC</strong>&d=<strong class="text-info">DDD</strong>&css=<strong>http://www.clienttoolbox.com/display.css</strong>
+							    </div>    
+                                
+                                <p>You can combine all the fields in a (very long) URL.<br />
+You can also opt to send these fields as POST instead of GET, if you know what these mean (if not, don't worry about it -- It's for the geeks! ;-)    </p>
+                                                
+                                                
+												
+											</div>
+                                            
+                                            
+                                        <a name="option2"></a>    
+                                     <div class="well">
+                                     
+                                     <h4>Option 2</h4>
+                                     <p>Gives you much more control, and the ability to automatically add points, visits, dollars, etc. to a client's customer account for signing-up, but you or they need to be able to add or modify some files to their website and upload one to their website's server, or know someone who knows how to do that.</p>
+                                     
+                                     <div class="row-fluid">
+                                     <div class="span8">
+                                     
+                                     <p>There are three steps to adding customer signup to a website:</p>
+                                     <ol type="1">
+                                     	
+                                        <li>Make a page with the form for the customer to put in their information.</li>
+                                        <li>Make a thank-you page to be shown to the customer once they have submitted their info.</li>
+                                        <li>Upload the file that will process this form and send it to our server with the proper information.</li>
+                                        </ol>
+                                        
+                                        <p><strong>Step 1</strong></p>
+                                        
+                                        <p>Make a page on your website that includes the following form, or the following form elements. Copy-paste the HTML code below:</p>
+
+                                     
+                                     
+                                     <div class="alert alert-block alert-success">
+										Please fill out this form to register for our Rewards programs:<br />
+&lt;form action="register.php" method="post" name="add_customer_form"&gt;<br />
+     &lt;table border="0"&gt;<br />
+          &lt;/!-- To enable the customer to enter a card number, remove this whole line and the fifth line down.<br />
+          &lt;tr&gt;<br />
+               &lt;td&gt;Card Number:&lt;/td&gt;<br />
+               &lt;td&gt;&lt;input type="text" name="card_number" size="24" maxlength="100" border="0"&gt;&lt;/td&gt;<br />
+          &lt;/tr&gt;<br />
+          --&gt;<br />
+          &lt;tr&gt;<br />
+               &lt;td&gt;First Name:&lt;/td&gt;<br />
+               &lt;td&gt;&lt;input type="text" name="first_name" size="24" maxlength="50" border="0"&gt;&lt;/td&gt;<br />
+          &lt;/tr&gt;<br />
+          &lt;tr&gt;<br />
+               &lt;td&gt;Last Name:&lt;/td&gt;<br />
+               &lt;td&gt;&lt;input type="text" name="last_name" size="24" maxlength="255" border="0"&gt;&lt;/td&gt;<br />
+          &lt;/tr&gt;<br />
+          &lt;tr&gt;<br />
+               &lt;td&gt;Email Address:&lt;/td&gt;<br />
+               &lt;td&gt;&lt;input type="text" name="email" size="24" maxlength="255" border="0"&gt;&lt;/td&gt;<br />
+          &lt;/tr&gt;<br />
+          &lt;tr&gt;<br />
+               &lt;td&gt;Phone Number:&lt;/td&gt;<br />
+               &lt;td&gt;&lt;input type="text" name="phone" size="24" maxlength="16" border="0"&gt;&lt;/td&gt;<br />
+          &lt;/tr&gt;<br />
+          &lt;tr&gt;<br />
+               &lt;td&gt;&lt;/td&gt;<br />
+          &lt;/tr&gt;<br />
+          &lt;tr&gt;<br />
+               &lt;td&gt;Street Line 1:&lt;/td&gt;<br />
+               &lt;td&gt;&lt;input type="text" name="street1" size="24" maxlength="255" border="0"&gt;&lt;/td&gt;<br />
+          &lt;/tr&gt;<br />
+          &lt;tr&gt;<br />
+               &lt;td&gt;Street Line 2:&lt;/td&gt;<br />
+               &lt;td&gt;&lt;input type="text" name="street2" size="24" maxlength="255" border="0"&gt;&lt;/td&gt;<br />
+          &lt;/tr&gt;<br />
+          &lt;tr&gt;<br />
+               &lt;td&gt;City:&lt;/td&gt;<br />
+               &lt;td&gt;&lt;input type="text" name="city" size="24" maxlength="255" border="0"&gt;&lt;/td&gt;<br />
+          &lt;/tr&gt;<br />
+          &lt;tr&gt;<br />
+               &lt;td&gt;State / Province:&lt;/td&gt;<br />
+               &lt;td&gt;&lt;input type="text" name="state" size="24" maxlength="50" border="0"&gt;&lt;/td&gt;<br />
+          &lt;/tr&gt;<br />
+          &lt;tr&gt;<br />
+               &lt;td&gt;Zip / Postal Code:&lt;/td&gt;<br />
+               &lt;td&gt;&lt;input type="text" name="postal_code" size="24" maxlength="50" border="0"&gt;&lt;/td&gt;<br />
+          &lt;/tr&gt;<br />
+          &lt;tr&gt;<br />
+               &lt;td&gt;Country:&lt;/td&gt;<br />
+               &lt;td&gt;&lt;input type="text" name="country" size="24" maxlength="2555" border="0"&gt;&lt;/td&gt;<br />
+          &lt;/tr&gt;<br />
+          &lt;tr&gt;<br />
+               &lt;td&gt;&lt;/td&gt;<br />
+          &lt;/tr&gt;<br />
+          &lt;tr&gt;<br />
+               &lt;td&gt;Special Note:&lt;/td&gt;<br />
+               &lt;td&gt;&lt;input type="text" name="custom1" size="30" maxlength="255" border="0"&gt;&lt;/td&gt;<br />
+          &lt;/tr&gt;<br />
+          &lt;tr&gt;<br />
+               &lt;td&gt;&lt;br&gt;&lt;/td&gt;<br />
+          &lt;/tr&gt;<br />
+          &lt;tr&gt;<br />
+               &lt;td&gt;&lt;/td&gt;<br />
+               &lt;td&gt;&lt;input type="submit" value="Register" border="0"&gt;&lt;/td&gt;<br />
+          &lt;/tr&gt;<br />
+     &lt;/table&gt;<br />
+&lt;/form&gt;<br />
+                                
+							    </div> 
+                                
+                               <p><strong>Notes:</strong></p>
+                               <ul>
+                               <li>Feel free to change the name of the PHP file the form is submitted to. On the example above, the file is "<strong>register.php</strong>"</li>
+                               <li>If you want to allow your customers to enter in a card number, remove the HTML comment tags on lines 4 and 9:<br />
+     						       (The whole lines with "&lt;!-- To enable ... " and "--&gt;")</li>
+								<li>You can't add more fields, but you can remove any that you don't want or need.</li>
+                                </ul>
+
+                                     
+                                     
+                                     </div>
+                                     
+                                     
+                                     <div class="span4">
+                                     
+                                     	<div class="well">
+                                        	<h5>Requirements</h5>
+                                            
+                                            <p>You, your client, or someone else must have the ability to add files to your client's web server (through FTP or some other method.)</p>
+                                            <p>The server where your client's site is hosted must has PHP enabled. (The vast majority of Web servers do, and it will be unusual for it not to.)</p>
+                                            <p>If neither requirements can be met, please use Option 1, above.</p>
+                                            <p>If your client is using a content management tool like Joomla, Mambo, or Drupal, include these steps as separate files inside a Wrapper or iFrame.</p>
+                                        
+                                        </div>
+                                     
+                                     </div>
+                                     
+                                     
+                                     
+                                     </div>
+                                     
+                                     
+                                     
+                                     <p><strong>Step 2</strong></p>
+                                     
+                                     <p>Make a new page on your client's website to thank the user for signing up for the rewards program. Make a note of the URL of this page: we'll need to add it to the next step where we specify where to send the customer once they have submitted their info.</p>
+                                     
+                                     <p><strong>Step 3</strong></p>
+                                     
+                                     <p>Make a file called "<strong>register.php</strong>" (or any other filename as long as it ends with ".php" and matches the filename the form will be submitted to in <strong>STEP 1</strong>. This is a "bare" file, without any HTML - just the lines of code below.</p>
+                                     
+                                     <p>In this file, copy-paste the following PHP code:</p>
+                                     
+                                     <div class="alert alert-block alert-success">
+                                     &lt;?php$url = 'https://hwprod.clienttoolbox.com/admin.php'<br />
+$user_id = '<strong class="text-info">AAAAAAAA</strong>';<br />
+$user_token = '<strong class="text-info">BBBBBBBB</strong>';<br />
+$campaign_id = '<strong class="text-info">CCCCCCCC</strong>';<br />
+$redirect_url = '<strong class="text-info">DDDDDDDD</strong>';<br />
+<strong class="text-info">//</strong>$auto_add = '<strong class="text-info">EEEEEEEE</strong>';<br />
+$ch = curl_init();<br />
+curl_setopt($ch, CURLOPT_URL, "$url");<br />
+$to_post = '&type=record_customer';<br />
+$to_post .= '&api=y';<br />
+$to_post .= '&a='.$user_id;<br />
+$to_post .= '&b='.$user_token;<br />
+$to_post .= '&c='.$campaign_id;<br />
+<strong class="text-info">//</strong>$to_post .= '&card_number='.$_REQUEST['card_number'];<br />
+$to_post .= '&first_name='.$_REQUEST['first_name'];<br />
+$to_post .= '&last_name='.$_REQUEST['last_name'];<br />
+$to_post .= '&email='.$_REQUEST['email'];<br />
+$to_post .= '&phone='.$_REQUEST['phone'];<br />
+$to_post .= '&street1='.$_REQUEST['street1'];<br />
+$to_post .= '&street2='.$_REQUEST['street2'];<br />
+$to_post .= '&city='.$_REQUEST['city'];<br />
+$to_post .= '&state='.$_REQUEST['state'];<br />
+$to_post .= '&postal_code='.$_REQUEST['postal_code'];<br />
+$to_post .= '&country='.$_REQUEST['country'];<br />
+$to_post .= '&custom1='.$_REQUEST['custom1'];<br />
+<strong>//</strong>$to_post .= '&auto_add='.$auto_add;<br />
+curl_setopt($ch, CURLOPT_POST, 1);<br />
+curl_setopt($ch, CURLOPT_POSTFIELDS, $to_post);<br />
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER,false);<br />
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);<br />
+$result = curl_exec($ch);<br />
+curl_close($ch);<br />
+header('Location: '.$redirect_url);<br />
+?&gt;<br />
+                                     
+                                     </div>
+                                     
+                                    <p>Make sure to replace the following placeholders:</p>
+                                     <ul>
+                                     	<li><strong class="text-info">AAAAAAAA</strong> - This is the client's Account ID. You can find it near the bottom of the page when you click the "Edit" button next to the Account Information section in the Control Panel, when you log in to your client's account from in the listing of Clients when you click the "Clients" tab above. Example: "acmeinc".</li>
+										<li><strong class="text-info">BBBBBBBB</strong> - This is your client's account security token (a long string of 32 characters). You can find it near the bottom of the page when you click the "Edit" button next to the Account Information section in the Control Panel, when you log in to your client's account from in the listing of Clients when you click the "Clients" tab above. Note: The Security Token will change if you change you client's account owner's password. Example: "89e495e7941cf9e40e6980d14a16bf023ccd4c91".</li>
+										<li><strong class="text-info">CCCCCCCC</strong> - This is the ID of the campaign your client wants their customer to signup for. Campaign IDs are shown below the "Campaign Name" when you click the "Edit" button to the right of the campaign in the campaign list on the Control Panel screen.</li>
+										<li><strong class="text-info">DDDDDDDD</strong> - The url you want your client's customer to go to after submitting their information. Make sure to type the full URL, including "http://" or "https://". Example: "http://www.yoursite.com/thank-you.html".</li>
+                                        <li><strong class="text-info">EEEEEEEE - OPTIONAL</strong>. The amount of points, visits, dollars, or name of product or service, depending on the campaign type, to automatically add to a customer's account in the campaign specified above. For example, as a thank-you bonus for signing-up. Example: "25" (will add 25 points to the customer's starting balance)<br />
+Note: Remove the double slashes ("//") from the front of the two lines (line 6 and line 26) where they appear if you want to use this feature.</li>
+<li><strong>OPTIONAL:</strong> If you want to allow your customers to enter in a card number, remove the double slashes ("<strong class="text-info">//</strong>") in front of line 14:
+     ($to_post .= '&card_number= ...)</li>
+                                     
+                                     </ul>
+                                     
+                                     
+                                     <p>Once you have configured this file by replacing the placeholders above, upload the file to the client's site, to the same directory as the page that has the form from STEP 1.</p>
+                                     
+                                     <p>Go ahead and test it out. After filling out the form, you should be redirected to the URL you specified, and within a few minutes, your client should get an email with the customer's details.</p>
+                                     
+                                     <p>If your client wants to assign them a card number, (to be sent back to the customer via mail or email, for example) they just have to look-up the customer on the campaign the customer signed up for, "edit" the customer's info, and scan or enter in the card number for the card they want to assign to the customer, before they send it.</p>
+                                     
+                                     <p>Contact us for further instructions on additional features:<br />
+- Make certain fields required (Requires JavaScript)<br />
+- Add CAPTCHA verification to the the form (Requires PHP files to be installed on the client's server)
+</p>
+                                     
+                                    
+                                     
+                                     </div>        
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+									
+                                            </div>
+                                    
+                                    </div>
+                                    
+                                    
+                                    
+								</div>
+                                
+                                
+                                
+							</div>
+							<!-- END EXAMPLE TABLE PORTLET-->
+                            
+                            
+                                   
+                                    
+                            
+                            
+						</div>
+					</div>
+					
+				</div>
+				<!-- END PAGE CONTENT-->
+			</div>
+			<!-- END PAGE CONTAINER-->
+		</div>
+		<!-- END PAGE -->
+	</div>
+	<!-- END CONTAINER -->
+	<!-- BEGIN FOOTER -->
+	<div id="footer">
+		
+		<div class="span pull-right">
+			<span class="go-top"><i class="icon-arrow-up"></i></span>
+		</div>
+	</div>
+	<!-- END FOOTER -->
+	<!-- BEGIN JAVASCRIPTS -->
+	<!-- Load javascripts at bottom, this will reduce page load time -->
+	<script src="assets/js/jquery-1.8.2.min.js"></script>	
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.blockui.js"></script>
+	<!-- ie8 fixes -->
+	<!--[if lt IE 9]>
+	<script src="assets/js/excanvas.js"></script>
+	<script src="assets/js/respond.js"></script>
+	<![endif]-->	
+	<script type="text/javascript" src="assets/data-tables/jquery.dataTables.js"></script>
+	<script type="text/javascript" src="assets/data-tables/DT_bootstrap.js"></script>	
+	<script type="text/javascript" src="assets/uniform/jquery.uniform.min.js"></script>
+	<script src="assets/fancybox/source/jquery.fancybox.pack.js"></script>
+	<script src="assets/js/app.js"></script>		
+	<script>
+		jQuery(document).ready(function() {			
+			// initiate layout and plugins
+			App.init();
+		});
+	</script>
+</body>
+<!-- END BODY -->
+</html>
